@@ -2,5 +2,8 @@ void gameOver() {
   background(255,100,100);
 }
 
-void gameOverClicks() {
+void gameOverClicksP() {
+}
+
+void gameOverClicksR() {
 }

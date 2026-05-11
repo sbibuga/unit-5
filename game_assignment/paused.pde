@@ -2,5 +2,8 @@ void paused() {
   background(255,245,150);
 }
 
-void pausedClicks() {
+void pausedClicksP() {
+}
+
+void pausedClicksR() {
 }
