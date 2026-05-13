@@ -1,6 +1,8 @@
 void mousePressed() {
   mousePressX = mouseX;
   mousePressY = mouseY;
+  
+  // mode stuff
   if (mode == intro) {
     introClicksP();
   } else if (mode == inProg) {
