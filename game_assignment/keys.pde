@@ -1,12 +1,17 @@
 void keyPressed() {
   if (key == 'p') {
     if (mode == inProg) {
-      mode = paused;
-      savedVelocity = velocity;
-      velocity = 0;
+      if (pausesLeft > 0) {
+        pausesLeft -= 1;
+        mode = paused;
+        savedVelocity = velocity;
+        velocity = 0;
+      }
     } else if (mode == paused) {
       mode = inProg;
       velocity = savedVelocity;
+      x = 400;
+      y = random(225,575);
     }
   }
 }

@@ -9,9 +9,9 @@ int mousePressX = 0;
 int mousePressY = 0;
 float velocityChange;
 int score;
-int lives;
+int highScore;
 float savedVelocity;
-
+int pausesLeft;
 
 
 
@@ -23,9 +23,11 @@ void setup() {
   x = 400;
   y = 400;
   d = 80;
-  velocity = 0.01;
-  velocityChange = 0.02;
+  velocity = 0.6;
+  velocityChange = 0.6;
   score = 0;
+  highScore = 0;
+  pausesLeft = 2;
 }
 
 void draw() {

@@ -4,14 +4,19 @@ void gameOver() {
   textSize(100);
   fill(255);
   text("Game Over",400,325);
-  text("score: " + score,400,475);
-  textSize(20);
-  text("click the white square to restart",400,650);
+  textSize(80);
+  text("Score: " + score,400,475);
+  text("High score: " + highScore,400,555);
   fill(255);
   stroke(0);
   strokeWeight(4);
   rect(650,650,100,100);
+  fill(0);
+  textSize(100);
+  text("←",700,690);
 }
+
+  
 
 void gameOverClicksP() {
   if (mouseX >= 650 && mouseX <= 750) {
@@ -20,9 +25,10 @@ void gameOverClicksP() {
       x = 400;
       y = 400;
       d = 80;
-      velocity = 0.01;
-      velocityChange = 0.02;
+      velocity = 0.6;
+      velocityChange = 0.6;
       score = 0;
+      pausesLeft = 2;
     }
   }
 }
