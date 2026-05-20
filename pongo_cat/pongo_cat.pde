@@ -4,6 +4,8 @@ final int inProg = 2;
 final int paused = 3;
 final int gameOver = 4;
 
+float leftX, leftY, leftD, rightX, rightY, rightD;
+
 
 
 
