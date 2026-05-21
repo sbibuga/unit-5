@@ -4,7 +4,12 @@ final int inProg = 2;
 final int paused = 3;
 final int gameOver = 4;
 
+// paddle and ball variables
 float leftX, leftY, leftD, rightX, rightY, rightD;
+float ballX, ballY, ballD;
+
+// keyboard variables
+boolean wPressed, sPressed, upPressed, downPressed;
 
 
 
@@ -15,6 +20,17 @@ float leftX, leftY, leftD, rightX, rightY, rightD;
 void setup() {
   size(1000,600);
   mode = intro;
+  
+  // variable setup
+  leftX = 0;
+  leftY = 300;
+  leftD = 150;
+  rightX = 1000;
+  rightY = 300;
+  rightD = 150;
+  ballX = 500;
+  ballY = 300;
+  ballD = 80;
 }
 
 void draw() {
