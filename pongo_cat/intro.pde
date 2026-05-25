@@ -14,8 +14,6 @@ void intro() {
 
 void introClicksP() {
   if (mouseX >= 375 && mouseX <= 625) {
-    if (mouseY >= 350 && mouseY <= 450) {
-      mode = inProg;
-    }
+    if (mouseY >= 350 && mouseY <= 450) mode = inProg;
   }
 }

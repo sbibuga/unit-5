@@ -1,5 +1,3 @@
 void mousePressed() {
-  if (mode == intro) {
-    introClicksP();
-  }
+  if (mode == intro) introClicksP();
 }

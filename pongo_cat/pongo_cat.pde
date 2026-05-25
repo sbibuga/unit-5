@@ -1,3 +1,14 @@
+// variables
+float distanceP1;
+float distanceP2;
+float velocityX;
+float velocityY;
+
+// scorekeeping
+int scoreP1;
+int scoreP2;
+
+// mode ints
 int mode;
 final int intro = 1;
 final int inProg = 2;
@@ -31,6 +42,14 @@ void setup() {
   ballX = 500;
   ballY = 300;
   ballD = 80;
+  scoreP1 = 0;
+  scoreP2 = 0;
+  velocityX = 5;
+  velocityY = random(-1,1);
+  wPressed = false;
+  sPressed = false;
+  upPressed = false;
+  downPressed = false;
 }
 
 void draw() {
