@@ -3,15 +3,17 @@ float distanceP1;
 float distanceP2;
 float velocityX;
 float velocityY;
+float velocityMult;
 
 // scorekeeping
 int scoreP1;
 int scoreP2;
+int combo;
 
 // mode ints
 int mode;
 final int intro = 1;
-final int inProg = 2;
+final int inProg2P = 2;
 final int paused = 3;
 final int gameOver = 4;
 
@@ -44,8 +46,10 @@ void setup() {
   ballD = 80;
   scoreP1 = 0;
   scoreP2 = 0;
+  combo = 0;
   velocityX = 5;
   velocityY = random(-1,1);
+  velocityMult = 0.8;
   wPressed = false;
   sPressed = false;
   upPressed = false;
@@ -55,8 +59,8 @@ void setup() {
 void draw() {
   if (mode == intro) {
     intro();
-  } else if (mode == inProg) {
-    inProg();
+  } else if (mode == inProg2P) {
+    inProg2P();
   } else if (mode == paused) {
     paused();
   } else if (mode == gameOver) {
