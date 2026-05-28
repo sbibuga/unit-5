@@ -13,13 +13,15 @@ int combo;
 // mode ints
 int mode;
 final int intro = 1;
-final int inProg2P = 2;
-final int paused = 3;
-final int gameOver = 4;
+final int inProg1P = 2;
+final int inProg2P = 3;
+final int paused = 4;
+final int gameOver = 5;
 
 // paddle and ball variables
 float leftX, leftY, leftD, rightX, rightY, rightD;
 float ballX, ballY, ballD;
+float plx, ply,pld, prx, pry, prd;
 
 // keyboard variables
 boolean wPressed, sPressed, upPressed, downPressed;
@@ -33,32 +35,13 @@ boolean wPressed, sPressed, upPressed, downPressed;
 void setup() {
   size(1000,600);
   mode = intro;
-  
-  // variable setup
-  leftX = 0;
-  leftY = 300;
-  leftD = 150;
-  rightX = 1000;
-  rightY = 300;
-  rightD = 150;
-  ballX = 500;
-  ballY = 300;
-  ballD = 80;
-  scoreP1 = 0;
-  scoreP2 = 0;
-  combo = 0;
-  velocityX = 5;
-  velocityY = random(-1,1);
-  velocityMult = 0.8;
-  wPressed = false;
-  sPressed = false;
-  upPressed = false;
-  downPressed = false;
 }
 
 void draw() {
   if (mode == intro) {
     intro();
+  } else if (mode == inProg1P) {
+    inProg1P();
   } else if (mode == inProg2P) {
     inProg2P();
   } else if (mode == paused) {
