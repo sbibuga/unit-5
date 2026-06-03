@@ -1,4 +1,16 @@
+// colour variables
+color red = #FF7777;
+color orange = #FFBB77;
+color yellow = #FFFFAA;
+color green = #77FF77;
+color blue = #7799FF;
+color purple = #E988EE;
 
+// paddle and ball position
+float padX;
+float padY;
+float padSize;
+float padVelo;
 
 
 
