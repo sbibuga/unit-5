@@ -25,12 +25,14 @@ void inProg2P() {
     velocityX = (ballX - leftX)/10*velocityMult;
     velocityY = (ballY - leftY)/10*velocityMult;
     velocityMult += 0.05;
+    ballD *= 0.95;
     if (velocityX < 1) velocityX = 1;
     combo += 1;
   } else if (distanceP2 <= (ballD + rightD)/2 && velocityX > 0) {
     velocityX = (ballX - rightX)/10*velocityMult;
     velocityY = (ballY - rightY)/10*velocityMult;
     velocityMult += 0.05;
+    ballD *= 0.95;
     if (velocityX > -1) velocityX = -1;
     combo += 1;
   }
@@ -50,6 +52,7 @@ void inProg2P() {
     velocityX = -5;
     velocityY = random(-1,1);
     velocityMult = 0.8;
+    ballD = 80;
   }
   if (ballX <= 0) {
     scoreP2 += 1;
@@ -59,6 +62,7 @@ void inProg2P() {
     velocityX = 5;
     velocityY = random(-1,1);
     velocityMult = 0.8;
+    ballD = 80;
   }
   
   // scorekeeping

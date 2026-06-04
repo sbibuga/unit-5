@@ -1,19 +1,16 @@
 // colour variables
-color red = #FF7777;
-color orange = #FFBB77;
-color yellow = #FFFFAA;
-color green = #77FF77;
-color blue = #7799FF;
-color purple = #E988EE;
+final color red = #FF7777;
+final color orange = #FFBB77;
+final color yellow = #FFFFAA;
+final color green = #77FF77;
+final color blue = #7799FF;
+final color purple = #E988EE;
 
 // paddle and ball position
-float padX;
-float padY;
-float padSize;
-float padVelo;
+float padX, padY, padSize, padVelo;
 
-
-
+// key booleans
+boolean aPressed, dPressed, leftPressed, rightPressed;
 
 
 // scorekeeping
