@@ -1,19 +1,14 @@
-// colour variables
-final color red = #FF7777;
-final color orange = #FFBB77;
-final color yellow = #FFFFAA;
-final color green = #77FF77;
-final color blue = #7799FF;
-final color purple = #E988EE;
-
 // paddle position
 float padX, padY, padSize, padVelo;
 
+// ball position
+float ballX, ballY, ballSize, ballVX, ballVY;
+
 // key booleans
-boolean aPressed, dPressed, leftPressed, rightPressed;
+boolean aPressed, dPressed;
 
 // brick size
-float brickD = 100;
+float brickD;
 
 
 // scorekeeping
@@ -30,34 +25,39 @@ final int gameOver = 4;
 int[] x;
 int[] y;
 
+// colours
+color[] brickHue;
+
 
 
 void setup() {
   size(1000,800);
   mode = intro;
   
-  // paddle setup
-  padX = width/2;
-  padY = height;
-  padSize = 100;
-  padVelo = 5;
-  
   // array setup
   x = new int[4];
   y = new int[4];
   
+  // colour setup
+  brickHue = new color[4];
+  
+  brickHue[0] = #FF7777;
+  brickHue[1] = #FFFFAA;
+  brickHue[2] = #77FF77;
+  brickHue[3] = #7799FF;
+  
   // array setup II
   x[0] = 200;
-  y[0] = 100;
+  y[0] = 80;
   
   x[1] = 400;
-  y[1] = 100;
+  y[1] = 210;
   
   x[2] = 600;
-  y[2] = 100;
+  y[2] = 340;
   
   x[3] = 800;
-  y[3] = 100;
+  y[3] = 470;
 }
 
 void draw() {

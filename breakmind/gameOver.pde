@@ -1,2 +1,2 @@
-void gameOver(){
+void gameOver() {
 }
