@@ -9,7 +9,7 @@ void intro() {
   // brick setup
   brickD = 85;
   
-  // ball step
+  // ball setup
   ballX = width/2;
   ballY = 575;
   ballSize = 30;
@@ -25,8 +25,12 @@ void intro() {
   textSize(60);
   text("click to start",500,625);
   
+  // key booleans
   aPressed = false;
   dPressed = false;
+  
+  // score
+  score = 0;
 }
 
 void introClicksP() {

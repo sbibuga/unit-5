@@ -24,6 +24,7 @@ final int gameOver = 4;
 // brick arrays
 int[] x;
 int[] y;
+int tempX, tempY;
 
 // colours
 color[] brickHue;
@@ -35,8 +36,13 @@ void setup() {
   mode = intro;
   
   // array setup
-  x = new int[4];
-  y = new int[4];
+  x = new int[10];
+  y = new int[10];
+  
+  
+  
+  
+  
   
   // colour setup
   brickHue = new color[4];
@@ -51,13 +57,13 @@ void setup() {
   y[0] = 80;
   
   x[1] = 400;
-  y[1] = 210;
+  y[1] = 220;
   
   x[2] = 600;
-  y[2] = 340;
+  y[2] = 360;
   
   x[3] = 800;
-  y[3] = 470;
+  y[3] = 500;
 }
 
 void draw() {
